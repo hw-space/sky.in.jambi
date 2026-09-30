@@ -11,7 +11,7 @@
 :root{--cream:#efe9df;--muted:#aaa59d;--line:rgba(255,255,255,.16)}
 a{text-decoration:none;color:inherit}.page{min-height:100vh;background:radial-gradient(circle at 80% 10%,#263238 0,transparent 28%),#090909}
 nav{position:fixed;z-index:20;top:0;left:0;right:0;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;mix-blend-mode:screen}
-.logo{font-weight:700;letter-spacing:.18em;font-size:14px}.navlinks{display:flex;gap:28px;font-size:13px;color:#ddd}.menu{display:none;border:1px solid var(--line);border-radius:99px;padding:9px 14px}
+.logo{font-weight:700;letter-spacing:.18em;font-size:14px}.navlinks{display:flex;gap:28px;font-size:13px;color:#ddd}
 .hero{height:100svh;min-height:680px;position:relative;display:grid;place-items:end start;padding:0 7vw 9vh;overflow:hidden}
 .hero:before{content:"";position:absolute;inset:0;background:
 linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,.18) 35%,#090909 100%),
@@ -33,7 +33,7 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(62px,12vw,155px);font-we
 footer{padding:40px 7vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#777;font-size:12px}.footerlogo{color:#fff;letter-spacing:.18em;font-weight:700}
 .reveal{opacity:0;transform:translateY(35px);transition:opacity .8s,transform .8s}.reveal.show{opacity:1;transform:none}
 @media(max-width:720px){
-nav{height:64px;padding:0 20px}.navlinks{display:none}.menu{display:block}.hero{padding:0 22px 52px;min-height:100svh}.scroll{display:none}.hero p{font-size:14px;margin:20px 0}.section{padding:82px 22px}.intro{grid-template-columns:1fr;gap:20px}.rooms{grid-template-columns:1fr}.card.big{grid-row:auto;min-height:470px}.card.small{min-height:300px}.experience{grid-template-columns:1fr;gap:38px}.visual{height:480px}.facts{gap:24px}.fact b{font-size:22px}.cta{min-height:70vh;padding:40px 22px}footer{padding:30px 22px;gap:20px;flex-direction:column}
+nav{height:64px;padding:0 20px}.navlinks{display:none}.hero{padding:0 22px 52px;min-height:100svh}.scroll{display:none}.hero p{font-size:14px;margin:20px 0}.section{padding:82px 22px}.intro{grid-template-columns:1fr;gap:20px}.rooms{grid-template-columns:1fr}.card.big{grid-row:auto;min-height:470px}.card.small{min-height:300px}.experience{grid-template-columns:1fr;gap:38px}.visual{height:480px}.facts{gap:24px}.fact b{font-size:22px}.cta{min-height:70vh;padding:40px 22px}footer{padding:30px 22px;gap:20px;flex-direction:column}
 }
 </style>
 </head>
@@ -41,8 +41,7 @@ nav{height:64px;padding:0 20px}.navlinks{display:none}.menu{display:block}.hero{
 <div class="page">
 <nav>
   <div class="logo">SKY INN</div>
-  <div class="navlinks"><a href="#stay">STAY</a><a href="#experience">EXPERIENCE</a><a href="#contact">CONTACT</a></div>
-  <a class="menu" href="#contact">BOOK</a>
+  <div class="navlinks"><a href="#stay">STAY</a><a href="#experience">EXPERIENCE</a><a href="#about">ABOUT</a></div>
 </nav>
 
 <section class="hero">
@@ -94,13 +93,11 @@ nav{height:64px;padding:0 20px}.navlinks{display:none}.menu{display:block}.hero{
   </div>
 </section>
 
-  
-<section class="cta" id="contact">
+<section class="cta" id="about">
   <div class="reveal">
-    <div class="kicker">04 / Your next stay</div>
+    <div class="kicker">04 / Experience</div>
     <h2>See you<br>at SKY INN.</h2>
-    <p>Make your next Jambi stay feel a little different. Choose your room and start the journey.</p>
-    <a class="btn" href="mailto:booking@skyinnjambi.com">Book your stay <span class="arrow">↗</span></a>
+    <p>Make your next Jambi stay feel a little different.</p>
   </div>
 </section>
 
@@ -112,5 +109,5 @@ const io=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersec
 els.forEach(el=>io.observe(el));
 </script>
 </body>
-  </html>
-  
+</html>
+
