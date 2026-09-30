@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SKY INN — Jambi</title>
+<meta name="theme-color" content="#090909">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#090909;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidden}
+:root{--cream:#efe9df;--muted:#aaa59d;--line:rgba(255,255,255,.16)}
+a{text-decoration:none;color:inherit}.page{min-height:100vh;background:radial-gradient(circle at 80% 10%,#263238 0,transparent 28%),#090909}
+nav{position:fixed;z-index:20;top:0;left:0;right:0;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;mix-blend-mode:screen}
+.logo{font-weight:700;letter-spacing:.18em;font-size:14px}.navlinks{display:flex;gap:28px;font-size:13px;color:#ddd}.menu{display:none;border:1px solid var(--line);border-radius:99px;padding:9px 14px}
+.hero{height:100svh;min-height:680px;position:relative;display:grid;place-items:end start;padding:0 7vw 9vh;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:
+linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,.18) 35%,#090909 100%),
+url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1800&q=85') center/cover;
+transform:scale(1.04);animation:hero 9s ease-out both}
+@keyframes hero{to{transform:scale(1)}}.hero>*{position:relative;z-index:1}
+.eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#ddd;margin-bottom:18px}
+h1{font-family:'Playfair Display',serif;font-size:clamp(62px,12vw,155px);font-weight:500;line-height:.82;letter-spacing:-.055em;margin:0;max-width:900px}
+.hero p{max-width:500px;color:#d0ccc6;font-size:16px;line-height:1.6;margin:28px 0}
+.btn{display:inline-flex;align-items:center;gap:14px;background:#fff;color:#111;padding:15px 20px;border-radius:999px;font-weight:700;font-size:13px;transition:.3s}.btn:hover{transform:translateY(-3px);padding-right:26px}.arrow{font-size:18px}
+.scroll{position:absolute;right:7vw;bottom:7vh;color:#aaa;font-size:11px;writing-mode:vertical-rl;letter-spacing:.18em}
+.section{padding:120px 7vw}.intro{display:grid;grid-template-columns:1fr 1.5fr;gap:8vw;align-items:end}
+.kicker{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8f8b85}.intro h2{font-family:'Playfair Display',serif;font-size:clamp(42px,6vw,82px);font-weight:500;line-height:.95;margin:14px 0 0}.intro p{color:#aaa;line-height:1.8;max-width:620px;font-size:16px}
+.marquee{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:20px 0;color:#777;font-size:13px;letter-spacing:.22em;text-transform:uppercase}.track{display:inline-block;animation:move 24s linear infinite}@keyframes move{to{transform:translateX(-50%)}}
+.rooms{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:55px}.card{position:relative;min-height:530px;border-radius:26px;overflow:hidden;background:#151515}.card.small{min-height:255px}.card:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.86));z-index:1}.card.big{grid-row:span 2}.card img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .8s}.card:hover img{transform:scale(1.05)}.cardinfo{position:absolute;z-index:2;left:28px;right:28px;bottom:25px}.tag{font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:#ccc}.card h3{font-family:'Playfair Display',serif;font-size:34px;font-weight:500;margin:7px 0}.card p{color:#bbb;margin:0;font-size:13px}
+.experience{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center}.visual{height:620px;border-radius:28px;overflow:hidden;position:relative;background:url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1300&q=85') center/cover}.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(140deg,rgba(0,0,0,.05),rgba(0,0,0,.65))}.bigword{font-family:'Playfair Display',serif;font-size:clamp(70px,9vw,130px);line-height:.82;margin:18px 0 30px}.copy{color:#aaa;line-height:1.8;max-width:500px}.facts{display:flex;gap:40px;margin-top:38px}.fact b{display:block;font-size:28px}.fact span{font-size:11px;color:#888;text-transform:uppercase;letter-spacing:.14em}
+.cta{min-height:72vh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1800&q=85') center/cover}
+.cta h2{font-family:'Playfair Display',serif;font-size:clamp(55px,10vw,135px);line-height:.86;font-weight:500;margin:12px 0 30px}.cta p{color:#ddd;max-width:520px;margin:0 auto 28px;line-height:1.6}
+footer{padding:40px 7vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#777;font-size:12px}.footerlogo{color:#fff;letter-spacing:.18em;font-weight:700}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s,transform .8s}.reveal.show{opacity:1;transform:none}
+@media(max-width:720px){
+nav{height:64px;padding:0 20px}.navlinks{display:none}.menu{display:block}.hero{padding:0 22px 52px;min-height:100svh}.scroll{display:none}.hero p{font-size:14px;margin:20px 0}.section{padding:82px 22px}.intro{grid-template-columns:1fr;gap:20px}.rooms{grid-template-columns:1fr}.card.big{grid-row:auto;min-height:470px}.card.small{min-height:300px}.experience{grid-template-columns:1fr;gap:38px}.visual{height:480px}.facts{gap:24px}.fact b{font-size:22px}.cta{min-height:70vh;padding:40px 22px}footer{padding:30px 22px;gap:20px;flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<nav>
+  <div class="logo">SKY INN</div>
+  <div class="navlinks"><a href="#stay">STAY</a><a href="#experience">EXPERIENCE</a><a href="#contact">CONTACT</a></div>
+  <a class="menu" href="#contact">BOOK</a>
+</nav>
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">Jambi · Indonesia</div>
+    <h1>Stay above<br>the ordinary.</h1>
+    <p>A modern hotel experience in the heart of Jambi — calm rooms, warm details and a stay designed to feel effortless.</p>
+    <a class="btn" href="#stay">Explore the stay <span class="arrow">↗</span></a>
+  </div>
+  <div class="scroll">SCROLL TO EXPLORE ↓</div>
+</section>
+
+<div class="marquee"><div class="track">SKY INN · JAMBI · STAY · REST · EXPERIENCE · SKY INN · JAMBI · STAY · REST · EXPERIENCE · </div></div>
+
+<section class="section intro reveal">
+  <div><div class="kicker">01 / The hotel</div><h2>Designed for<br>slow moments.</h2></div>
+  <p>SKY INN brings a clean, contemporary mood to your time in Jambi. From a quiet morning to a late-night return, every corner is made to keep the experience simple, comfortable and memorable.</p>
+</section>
+
+<section class="section" id="stay">
+  <div class="kicker reveal">02 / Stay your way</div>
+  <div class="rooms">
+    <article class="card big reveal">
+      <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=85" alt="Hotel room">
+      <div class="cardinfo"><div class="tag">Signature room</div><h3>Quiet luxury.</h3><p>Soft light · Calm textures · Restful nights</p></div>
+    </article>
+    <article class="card small reveal">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=85" alt="Hotel pool">
+      <div class="cardinfo"><div class="tag">Atmosphere</div><h3>Take it slow.</h3></div>
+    </article>
+    <article class="card small reveal">
+      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=85" alt="Hotel detail">
+      <div class="cardinfo"><div class="tag">Details</div><h3>Made to feel good.</h3></div>
+    </article>
+  </div>
+</section>
+
+<section class="section experience" id="experience">
+  <div class="visual reveal"></div>
+  <div class="reveal">
+    <div class="kicker">03 / The experience</div>
+    <div class="bigword">More than<br>a room.</div>
+    <p class="copy">A stay should have its own rhythm. Wake up slowly, head out into Jambi, come back to a comfortable room and let the city fade into the background.</p>
+    <div class="facts">
+      <div class="fact"><b>24/7</b><span>Front desk</span></div>
+      <div class="fact"><b>JMB</b><span>Jambi city</span></div>
+      <div class="fact"><b>∞</b><span>Good moments</span></div>
+    </div>
+  </div>
+</section>
+
+  
+<section class="cta" id="contact">
+  <div class="reveal">
+    <div class="kicker">04 / Your next stay</div>
+    <h2>See you<br>at SKY INN.</h2>
+    <p>Make your next Jambi stay feel a little different. Choose your room and start the journey.</p>
+    <a class="btn" href="mailto:booking@skyinnjambi.com">Book your stay <span class="arrow">↗</span></a>
+  </div>
+</section>
+
+<footer><div class="footerlogo">SKY INN</div><div>Jambi · Indonesia</div><div>© 2026 SKY INN</div></footer>
+</div>
+<script>
+const els=document.querySelectorAll('.reveal');
+const io=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+els.forEach(el=>io.observe(el));
+</script>
+</body>
+  </html>
+  
