@@ -11,12 +11,15 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html {
       scroll-behavior: smooth;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f5f1;
+      font-family: Arial, sans-serif;
+      background: #f5f2ed;
       color: #222;
     }
 
@@ -24,368 +27,250 @@
     nav {
       position: fixed;
       top: 0;
-      left: 0;
       width: 100%;
-      z-index: 1000;
-      padding: 20px 7%;
+      padding: 18px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(20, 20, 20, 0.72);
+      z-index: 10;
+      background: rgba(0,0,0,.55);
       backdrop-filter: blur(10px);
     }
 
     .logo {
       color: white;
-      font-size: 24px;
-      font-weight: 700;
+      font-size: 21px;
+      font-weight: bold;
       letter-spacing: 4px;
     }
 
-    .menu {
-      display: flex;
-      gap: 30px;
-      list-style: none;
-    }
-
-    .menu a {
+    nav a {
       color: white;
       text-decoration: none;
-      font-size: 14px;
-      transition: .3s;
-    }
-
-    .menu a:hover {
-      color: #d6b36a;
+      margin-left: 18px;
+      font-size: 12px;
     }
 
     /* HERO */
     .hero {
       height: 100vh;
-      min-height: 650px;
-      position: relative;
+      min-height: 600px;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       text-align: center;
       color: white;
 
       background:
-        linear-gradient(
-          rgba(0,0,0,.48),
-          rgba(0,0,0,.58)
-        ),
-        url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=85");
+        linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.65)),
+        url("https://ik.imagekit.io/tvlk/image/imageResource/2025/11/10/1762774313318-0b1e2e4db6c7b1f1a1f6f1d1c0d7b7d9.jpeg");
 
       background-size: cover;
       background-position: center;
     }
 
     .hero-content {
-      max-width: 850px;
-      padding: 30px;
-      animation: fadeUp 1.2s ease;
+      padding: 25px;
     }
 
-    .small-title {
-      font-size: 14px;
-      letter-spacing: 6px;
-      margin-bottom: 20px;
-      color: #e4c982;
+    .hero small {
+      letter-spacing: 5px;
+      color: #d8b56b;
     }
 
     .hero h1 {
-      font-size: clamp(50px, 9vw, 110px);
+      font-size: 65px;
       letter-spacing: 8px;
-      font-weight: 600;
-      margin-bottom: 20px;
+      margin: 15px 0;
     }
 
     .hero p {
-      font-size: 17px;
+      font-size: 16px;
+      max-width: 550px;
       line-height: 1.7;
-      color: #eee;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 35px;
-      padding: 14px 30px;
-      border: 1px solid #e0bd72;
-      color: white;
-      text-decoration: none;
-      letter-spacing: 2px;
-      transition: .3s;
-    }
-
-    .button:hover {
-      background: #d5ad61;
-      color: #111;
-    }
-
-    /* ABOUT */
-    .section {
-      padding: 100px 8%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .section-title span {
-      color: #b18a42;
-      font-size: 13px;
-      letter-spacing: 4px;
-    }
-
-    .section-title h2 {
-      font-size: 42px;
-      margin-top: 12px;
-      font-weight: 500;
-    }
-
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      max-width: 1200px;
       margin: auto;
     }
 
-    .about-image {
-      height: 500px;
-      background:
-        url("https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=85")
-        center/cover;
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 13px 27px;
+      border: 1px solid #d8b56b;
+      color: white;
+      text-decoration: none;
+      letter-spacing: 2px;
     }
 
-    .about-text h3 {
-      font-size: 35px;
+    /* SECTION */
+    section {
+      padding: 80px 7%;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .title small {
+      color: #a17c3d;
+      letter-spacing: 4px;
+    }
+
+    .title h2 {
+      font-size: 38px;
+      margin-top: 10px;
       font-weight: 500;
+    }
+
+    /* ABOUT */
+    .about {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+      border-radius: 3px;
+    }
+
+    .about h2 {
+      font-size: 34px;
       margin-bottom: 20px;
     }
 
-    .about-text p {
+    .about p {
       color: #666;
       line-height: 1.9;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     /* ROOMS */
     .rooms {
-      background: #ebe7df;
+      background: #e9e4db;
     }
 
-    .room-grid {
-      max-width: 1200px;
+    .gallery {
+      max-width: 1100px;
       margin: auto;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
     }
 
-    .room {
+    .card {
       background: white;
       overflow: hidden;
-      transition: .4s;
     }
 
-    .room:hover {
-      transform: translateY(-8px);
+    .card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
     }
 
-    .room-image {
-      height: 280px;
-      background-size: cover;
-      background-position: center;
+    .card div {
+      padding: 22px;
     }
 
-    .room:nth-child(1) .room-image {
-      background-image:
-        url("https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=85");
-    }
-
-    .room:nth-child(2) .room-image {
-      background-image:
-        url("https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=85");
-    }
-
-    .room:nth-child(3) .room-image {
-      background-image:
-        url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=85");
-    }
-
-    .room-content {
-      padding: 25px;
-    }
-
-    .room-content h3 {
-      font-size: 23px;
+    .card h3 {
+      font-size: 21px;
       margin-bottom: 10px;
     }
 
-    .room-content p {
+    .card p {
       color: #777;
       line-height: 1.6;
       font-size: 14px;
     }
 
-    /* EXPERIENCE */
-    .experience {
-      max-width: 1200px;
+    /* INFO */
+    .info {
+      max-width: 900px;
       margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      text-align: center;
     }
 
-    .experience-card {
-      min-height: 300px;
-      padding: 35px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      color: white;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      overflow: hidden;
+    .info p {
+      color: #666;
+      line-height: 1.9;
+      margin-bottom: 20px;
     }
 
-    .experience-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        transparent,
-        rgba(0,0,0,.75)
-      );
-    }
-
-    .experience-card div {
-      position: relative;
-      z-index: 2;
-    }
-
-    .experience-card h3 {
-      font-size: 25px;
-      margin-bottom: 8px;
-    }
-
-    .experience-card p {
-      font-size: 14px;
-      color: #ddd;
-    }
-
-    .card1 {
-      background-image:
-        url("https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1000&q=85");
-    }
-
-    .card2 {
-      background-image:
-        url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85");
-    }
-
-    .card3 {
-      background-image:
-        url("https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1000&q=85");
+    .location {
+      margin-top: 30px;
+      padding: 25px;
+      background: white;
+      border-left: 4px solid #b18b4d;
     }
 
     /* FOOTER */
     footer {
-      background: #171717;
+      background: #181818;
       color: white;
       text-align: center;
-      padding: 60px 20px;
+      padding: 50px 20px;
     }
 
-    footer .logo {
-      margin-bottom: 15px;
+    footer h2 {
+      letter-spacing: 5px;
     }
 
     footer p {
       color: #999;
-      font-size: 14px;
-      margin-top: 10px;
-    }
-
-    .copyright {
-      margin-top: 35px;
-      font-size: 12px;
-      color: #666;
-    }
-
-    /* ANIMATION */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      margin-top: 12px;
+      font-size: 13px;
     }
 
     /* MOBILE */
-    @media (max-width: 768px) {
+    @media(max-width:700px) {
 
       nav {
-        padding: 17px 5%;
+        padding: 15px;
+      }
+
+      nav a {
+        margin-left: 8px;
+        font-size: 10px;
       }
 
       .logo {
-        font-size: 18px;
-      }
-
-      .menu {
-        gap: 12px;
-      }
-
-      .menu a {
-        font-size: 11px;
-      }
-
-      .hero {
-        min-height: 600px;
+        font-size: 17px;
       }
 
       .hero h1 {
-        letter-spacing: 4px;
+        font-size: 48px;
+        letter-spacing: 5px;
       }
 
       .hero p {
         font-size: 14px;
       }
 
-      .section {
-        padding: 70px 6%;
-      }
-
-      .section-title h2 {
-        font-size: 32px;
+      section {
+        padding: 65px 6%;
       }
 
       .about {
         grid-template-columns: 1fr;
-        gap: 35px;
       }
 
-      .about-image {
-        height: 350px;
+      .about img {
+        height: 320px;
       }
 
-      .room-grid,
-      .experience {
+      .gallery {
         grid-template-columns: 1fr;
       }
 
-      .experience-card {
-        min-height: 350px;
+      .title h2 {
+        font-size: 30px;
       }
     }
   </style>
@@ -397,12 +282,11 @@
   <nav>
     <div class="logo">SKY INN</div>
 
-    <ul class="menu">
-      <li><a href="#home">HOME</a></li>
-      <li><a href="#about">ABOUT</a></li>
-      <li><a href="#rooms">ROOMS</a></li>
-      <li><a href="#experience">EXPERIENCE</a></li>
-    </ul>
+    <div>
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#rooms">ROOMS</a>
+    </div>
   </nav>
 
 
@@ -411,19 +295,16 @@
 
     <div class="hero-content">
 
-      <div class="small-title">
-        WELCOME TO
-      </div>
+      <small>WELCOME TO</small>
 
       <h1>SKY INN</h1>
 
       <p>
-        Experience comfort, elegance and a memorable stay
-        in the heart of Jambi.
+        Urban & Classic Hotel in the heart of Jambi.
       </p>
 
-      <a href="#about" class="button">
-        EXPLORE SKY INN
+      <a href="#about" class="btn">
+        EXPLORE
       </a>
 
     </div>
@@ -432,31 +313,34 @@
 
 
   <!-- ABOUT -->
-  <section class="section" id="about">
+  <section id="about">
 
-    <div class="section-title">
-      <span>DISCOVER</span>
-      <h2>Sky Inn Jambi</h2>
+    <div class="title">
+      <small>DISCOVER</small>
+      <h2>SKY INN JAMBI</h2>
     </div>
 
     <div class="about">
 
-      <div class="about-image"></div>
+      <img
+        src="https://ik.imagekit.io/tvlk/image/imageResource/2025/11/10/1762774313318-0b1e2e4db6c7b1f1a1f6f1d1c0d7b7d9.jpeg"
+        alt="Sky Inn Jambi"
+      >
 
-      <div class="about-text">
+      <div>
 
-        <h3>A Comfortable Stay</h3>
+        <h2>Urban & Classic</h2>
 
         <p>
-          Sky Inn hadir untuk memberikan pengalaman menginap
-          yang nyaman dengan suasana modern dan pelayanan
-          yang hangat.
+          Sky Inn Express Jambi hadir dengan konsep
+          urban dan klasik yang dipadukan dengan
+          fasilitas modern.
         </p>
 
         <p>
-          Nikmati suasana hotel yang tenang, kamar yang nyaman,
-          serta berbagai area untuk bersantai bersama keluarga
-          maupun teman.
+          Hotel ini memiliki kamar dan suite dengan
+          ambience yang berbeda sehingga setiap
+          pengalaman menginap terasa lebih unik.
         </p>
 
       </div>
@@ -467,119 +351,31 @@
 
 
   <!-- ROOMS -->
-  <section class="section rooms" id="rooms">
+  <section class="rooms" id="rooms">
 
-    <div class="section-title">
-      <span>STAY WITH US</span>
-      <h2>Our Rooms</h2>
+    <div class="title">
+      <small>OUR HOTEL</small>
+      <h2>Explore Sky Inn</h2>
     </div>
 
-    <div class="room-grid">
+    <div class="gallery">
 
-      <div class="room">
+      <div class="card">
 
-        <div class="room-image"></div>
+        <img
+          src="https://ik.imagekit.io/tvlk/image/imageResource/2025/11/10/1762774313318-0b1e2e4db6c7b1f1a1f6f1d1c0d7b7d9.jpeg"
+          alt="Lobby Sky Inn"
+        >
 
-        <div class="room-content">
-          <h3>Standard Room</h3>
-
+        <div>
+          <h3>Lobby</h3>
           <p>
-            Ruangan nyaman dengan suasana modern
-            untuk pengalaman menginap yang menyenangkan.
+            Area lobby dengan suasana nyaman
+            untuk menyambut para tamu.
           </p>
         </div>
 
       </div>
 
 
-      <div class="room">
-
-        <div class="room-image"></div>
-
-        <div class="room-content">
-          <h3>Deluxe Room</h3>
-
-          <p>
-            Ruang lebih luas dengan interior elegan
-            dan suasana yang tenang.
-          </p>
-        </div>
-
-      </div>
-
-
-      <div class="room">
-
-        <div class="room-image"></div>
-
-        <div class="room-content">
-          <h3>Premium Room</h3>
-
-          <p>
-            Pilihan kamar untuk pengalaman menginap
-            yang lebih nyaman dan berkelas.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- EXPERIENCE -->
-  <section class="section" id="experience">
-
-    <div class="section-title">
-      <span>EXPERIENCE</span>
-      <h2>Enjoy Your Stay</h2>
-    </div>
-
-    <div class="experience">
-
-      <div class="experience-card card1">
-        <div>
-          <h3>Relax</h3>
-          <p>Tempat yang nyaman untuk bersantai.</p>
-        </div>
-      </div>
-
-      <div class="experience-card card2">
-        <div>
-          <h3>Dine</h3>
-          <p>Nikmati suasana kuliner yang menyenangkan.</p>
-        </div>
-      </div>
-
-      <div class="experience-card card3">
-        <div>
-          <h3>Enjoy</h3>
-          <p>Ciptakan momen terbaik selama menginap.</p>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer>
-
-    <div class="logo">
-      SKY INN
-    </div>
-
-    <p>
-      Jambi, Indonesia
-    </p>
-
-    <div class="copyright">
-      © 2026 SKY INN. All Rights Reserved.
-    </div>
-
-  </footer>
-
-</body>
-</html>
+      <div class="card">
