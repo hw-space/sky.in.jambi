@@ -1,381 +1,304 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>SKY INN Jambi</title>
+<title>SKY INN Jambi</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f2ed;
-      color: #222;
-    }
+body{
+  font-family:Arial, sans-serif;
+  background:#f4f1eb;
+  color:#222;
+}
 
-    /* NAVBAR */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 18px 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 10;
-      background: rgba(0,0,0,.55);
-      backdrop-filter: blur(10px);
-    }
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:99;
+  padding:18px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,.65);
+  backdrop-filter:blur(10px);
+}
 
-    .logo {
-      color: white;
-      font-size: 21px;
-      font-weight: bold;
-      letter-spacing: 4px;
-    }
+.logo{
+  color:white;
+  font-size:22px;
+  font-weight:bold;
+  letter-spacing:5px;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 12px;
-    }
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:22px;
+  font-size:12px;
+  letter-spacing:1px;
+}
 
-    /* HERO */
-    .hero {
-      height: 100vh;
-      min-height: 600px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
+/* HERO */
+.hero{
+  height:100vh;
+  min-height:600px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
 
-      background:
-        linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.65)),
-        url("https://ik.imagekit.io/tvlk/image/imageResource/2025/11/10/1762774313318-0b1e2e4db6c7b1f1a1f6f1d1c0d7b7d9.jpeg");
+  background:
+  linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+  linear-gradient(135deg,#444,#111);
+}
 
-      background-size: cover;
-      background-position: center;
-    }
+.hero small{
+  color:#d7b56d;
+  letter-spacing:6px;
+}
 
-    .hero-content {
-      padding: 25px;
-    }
+.hero h1{
+  font-size:clamp(55px,12vw,110px);
+  letter-spacing:10px;
+  margin:15px 0;
+}
 
-    .hero small {
-      letter-spacing: 5px;
-      color: #d8b56b;
-    }
+.hero p{
+  font-size:16px;
+  color:#ddd;
+  line-height:1.7;
+}
 
-    .hero h1 {
-      font-size: 65px;
-      letter-spacing: 8px;
-      margin: 15px 0;
-    }
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 30px;
+  border:1px solid #d7b56d;
+  color:white;
+  text-decoration:none;
+  letter-spacing:2px;
+}
 
-    .hero p {
-      font-size: 16px;
-      max-width: 550px;
-      line-height: 1.7;
-      margin: auto;
-    }
+/* SECTION */
+section{
+  padding:90px 7%;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 13px 27px;
-      border: 1px solid #d8b56b;
-      color: white;
-      text-decoration: none;
-      letter-spacing: 2px;
-    }
+.title{
+  text-align:center;
+  margin-bottom:50px;
+}
 
-    /* SECTION */
-    section {
-      padding: 80px 7%;
-    }
+.title small{
+  color:#a47d3c;
+  letter-spacing:4px;
+}
 
-    .title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
+.title h2{
+  font-size:38px;
+  font-weight:500;
+  margin-top:10px;
+}
 
-    .title small {
-      color: #a17c3d;
-      letter-spacing: 4px;
-    }
+/* ABOUT */
+.about{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
 
-    .title h2 {
-      font-size: 38px;
-      margin-top: 10px;
-      font-weight: 500;
-    }
+.photo{
+  height:430px;
+  background:
+  linear-gradient(135deg,#d8d1c5,#81796c);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  text-align:center;
+  font-size:15px;
+  letter-spacing:2px;
+}
 
-    /* ABOUT */
-    .about {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 45px;
-      align-items: center;
-    }
+.about h2{
+  font-size:35px;
+  margin-bottom:20px;
+}
 
-    .about img {
-      width: 100%;
-      height: 430px;
-      object-fit: cover;
-      border-radius: 3px;
-    }
+.about p{
+  color:#666;
+  line-height:1.9;
+  margin-bottom:15px;
+}
 
-    .about h2 {
-      font-size: 34px;
-      margin-bottom: 20px;
-    }
+/* FEATURES */
+.features{
+  background:#e8e2d8;
+}
 
-    .about p {
-      color: #666;
-      line-height: 1.9;
-      margin-bottom: 15px;
-    }
+.cards{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
 
-    /* ROOMS */
-    .rooms {
-      background: #e9e4db;
-    }
+.card{
+  background:white;
+  padding:35px 25px;
+  text-align:center;
+  transition:.3s;
+}
 
-    .gallery {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 20px;
-    }
+.card:hover{
+  transform:translateY(-7px);
+}
 
-    .card {
-      background: white;
-      overflow: hidden;
-    }
+.icon{
+  font-size:40px;
+  margin-bottom:20px;
+}
 
-    .card img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      display: block;
-    }
+.card h3{
+  margin-bottom:12px;
+}
 
-    .card div {
-      padding: 22px;
-    }
+.card p{
+  color:#777;
+  line-height:1.6;
+  font-size:14px;
+}
 
-    .card h3 {
-      font-size: 21px;
-      margin-bottom: 10px;
-    }
+/* GALLERY */
+.gallery{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
 
-    .card p {
-      color: #777;
-      line-height: 1.6;
-      font-size: 14px;
-    }
+.gallery-photo{
+  height:280px;
+  background:linear-gradient(135deg,#bdb5a8,#5d574e);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  text-align:center;
+}
 
-    /* INFO */
-    .info {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
+/* LOCATION */
+.location{
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+}
 
-    .info p {
-      color: #666;
-      line-height: 1.9;
-      margin-bottom: 20px;
-    }
+.location p{
+  color:#666;
+  line-height:1.8;
+}
 
-    .location {
-      margin-top: 30px;
-      padding: 25px;
-      background: white;
-      border-left: 4px solid #b18b4d;
-    }
+/* FOOTER */
+footer{
+  background:#151515;
+  color:white;
+  text-align:center;
+  padding:55px 20px;
+}
 
-    /* FOOTER */
-    footer {
-      background: #181818;
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-    }
+footer h2{
+  letter-spacing:6px;
+}
 
-    footer h2 {
-      letter-spacing: 5px;
-    }
+footer p{
+  color:#888;
+  margin-top:12px;
+  font-size:13px;
+}
 
-    footer p {
-      color: #999;
-      margin-top: 12px;
-      font-size: 13px;
-    }
+/* MOBILE */
+@media(max-width:700px){
 
-    /* MOBILE */
-    @media(max-width:700px) {
+  nav{
+    padding:16px;
+  }
 
-      nav {
-        padding: 15px;
-      }
+  .logo{
+    font-size:17px;
+  }
 
-      nav a {
-        margin-left: 8px;
-        font-size: 10px;
-      }
+  nav a{
+    margin-left:8px;
+    font-size:9px;
+  }
 
-      .logo {
-        font-size: 17px;
-      }
+  .hero h1{
+    font-size:52px;
+    letter-spacing:6px;
+  }
 
-      .hero h1 {
-        font-size: 48px;
-        letter-spacing: 5px;
-      }
+  .hero p{
+    font-size:14px;
+    padding:0 25px;
+  }
 
-      .hero p {
-        font-size: 14px;
-      }
+  section{
+    padding:70px 6%;
+  }
 
-      section {
-        padding: 65px 6%;
-      }
+  .about{
+    grid-template-columns:1fr;
+  }
 
-      .about {
-        grid-template-columns: 1fr;
-      }
+  .about h2{
+    font-size:30px;
+  }
 
-      .about img {
-        height: 320px;
-      }
+  .cards,
+  .gallery{
+    grid-template-columns:1fr;
+  }
 
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .title h2 {
-        font-size: 30px;
-      }
-    }
-  </style>
+  .photo{
+    height:320px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo">SKY INN</div>
+<nav>
+  <div class="logo">SKY INN</div>
 
-    <div>
-      <a href="#home">HOME</a>
-      <a href="#about">ABOUT</a>
-      <a href="#rooms">ROOMS</a>
-    </div>
-  </nav>
-
-
-  <!-- HERO -->
-  <section class="hero" id="home">
-
-    <div class="hero-content">
-
-      <small>WELCOME TO</small>
-
-      <h1>SKY INN</h1>
-
-      <p>
-        Urban & Classic Hotel in the heart of Jambi.
-      </p>
-
-      <a href="#about" class="btn">
-        EXPLORE
-      </a>
-
-    </div>
-
-  </section>
+  <div>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#rooms">ROOMS</a>
+  </div>
+</nav>
 
 
-  <!-- ABOUT -->
-  <section id="about">
-
-    <div class="title">
-      <small>DISCOVER</small>
-      <h2>SKY INN JAMBI</h2>
-    </div>
-
-    <div class="about">
-
-      <img
-        src="https://ik.imagekit.io/tvlk/image/imageResource/2025/11/10/1762774313318-0b1e2e4db6c7b1f1a1f6f1d1c0d7b7d9.jpeg"
-        alt="Sky Inn Jambi"
-      >
-
-      <div>
-
-        <h2>Urban & Classic</h2>
-
-        <p>
-          Sky Inn Express Jambi hadir dengan konsep
-          urban dan klasik yang dipadukan dengan
-          fasilitas modern.
-        </p>
-
-        <p>
-          Hotel ini memiliki kamar dan suite dengan
-          ambience yang berbeda sehingga setiap
-          pengalaman menginap terasa lebih unik.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ROOMS -->
-  <section class="rooms" id="rooms">
-
-    <div class="title">
-      <small>OUR HOTEL</small>
-      <h2>Explore Sky Inn</h2>
-    </div>
-
-    <div class="gallery">
-
-      <div class="card">
-
-        <img
-          src="https://ik.imagekit.io/tvlk/image/imageResource/2025/11/10/1762774313318-0b1e2e4db6c7b1f1a1f6f1d1c0d7b7d9.jpeg"
-          alt="Lobby Sky Inn"
-        >
-
-        <div>
-          <h3>Lobby</h3>
-          <p>
-            Area lobby dengan suasana nyaman
-            untuk menyambut para tamu.
-          </p>
-        </div>
-
-      </div>
-
-
-      <div class="card">
+<section class="
