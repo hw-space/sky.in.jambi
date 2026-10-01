@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>SKY INN Jambi</title>
+<title>SKY INN Jambi — Urban & Classic</title>
 
 <style>
 *{
@@ -18,287 +17,232 @@ html{
 }
 
 body{
-  font-family:Arial, sans-serif;
-  background:#f4f1eb;
-  color:#222;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#0b0b0b;
+  color:#fff;
 }
 
-/* NAVBAR */
 nav{
   position:fixed;
   top:0;
   left:0;
   width:100%;
-  z-index:99;
-  padding:18px 7%;
+  z-index:100;
+  padding:22px 7%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:rgba(0,0,0,.65);
-  backdrop-filter:blur(10px);
+  background:rgba(0,0,0,.35);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.1);
 }
 
 .logo{
-  color:white;
   font-size:22px;
+  letter-spacing:6px;
   font-weight:bold;
-  letter-spacing:5px;
 }
 
 nav a{
-  color:white;
+  color:#fff;
   text-decoration:none;
-  margin-left:22px;
-  font-size:12px;
-  letter-spacing:1px;
+  margin-left:25px;
+  font-size:11px;
+  letter-spacing:2px;
 }
 
-/* HERO */
 .hero{
-  height:100vh;
-  min-height:600px;
+  min-height:100vh;
   display:flex;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
   text-align:center;
-  color:white;
-
+  position:relative;
+  overflow:hidden;
   background:
-  linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
-  linear-gradient(135deg,#444,#111);
+    radial-gradient(circle at center,#45413a 0%,#171614 45%,#050505 100%);
 }
 
-.hero small{
-  color:#d7b56d;
-  letter-spacing:6px;
+.hero:after{
+  content:"";
+  position:absolute;
+  width:700px;
+  height:700px;
+  border:1px solid rgba(212,177,105,.18);
+  border-radius:50%;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:30px;
+}
+
+.eyebrow{
+  color:#d8b46a;
+  letter-spacing:7px;
+  font-size:12px;
 }
 
 .hero h1{
-  font-size:clamp(55px,12vw,110px);
-  letter-spacing:10px;
-  margin:15px 0;
+  font-size:clamp(60px,13vw,140px);
+  letter-spacing:15px;
+  font-weight:500;
+  margin:18px 0;
 }
 
 .hero p{
-  font-size:16px;
-  color:#ddd;
-  line-height:1.7;
+  color:#cfcfcf;
+  line-height:1.8;
+  font-size:15px;
 }
 
 .btn{
   display:inline-block;
-  margin-top:30px;
-  padding:14px 30px;
-  border:1px solid #d7b56d;
-  color:white;
+  margin-top:35px;
+  padding:15px 32px;
+  border:1px solid #c9a35c;
+  color:#fff;
   text-decoration:none;
-  letter-spacing:2px;
-}
-
-/* SECTION */
-section{
-  padding:90px 7%;
-}
-
-.title{
-  text-align:center;
-  margin-bottom:50px;
-}
-
-.title small{
-  color:#a47d3c;
-  letter-spacing:4px;
-}
-
-.title h2{
-  font-size:38px;
-  font-weight:500;
-  margin-top:10px;
-}
-
-/* ABOUT */
-.about{
-  max-width:1100px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:55px;
-  align-items:center;
-}
-
-.photo{
-  height:430px;
-  background:
-  linear-gradient(135deg,#d8d1c5,#81796c);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:white;
-  text-align:center;
-  font-size:15px;
-  letter-spacing:2px;
-}
-
-.about h2{
-  font-size:35px;
-  margin-bottom:20px;
-}
-
-.about p{
-  color:#666;
-  line-height:1.9;
-  margin-bottom:15px;
-}
-
-/* FEATURES */
-.features{
-  background:#e8e2d8;
-}
-
-.cards{
-  max-width:1100px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.card{
-  background:white;
-  padding:35px 25px;
-  text-align:center;
+  letter-spacing:3px;
+  font-size:11px;
   transition:.3s;
 }
 
-.card:hover{
-  transform:translateY(-7px);
+.btn:hover{
+  background:#c9a35c;
+  color:#111;
 }
 
-.icon{
-  font-size:40px;
-  margin-bottom:20px;
+section{
+  padding:110px 8%;
 }
 
-.card h3{
-  margin-bottom:12px;
+.dark{
+  background:#0b0b0b;
 }
 
-.card p{
+.gold-section{
+  background:#171512;
+}
+
+.heading{
+  text-align:center;
+  margin-bottom:65px;
+}
+
+.heading span{
+  color:#c9a35c;
+  letter-spacing:5px;
+  font-size:11px;
+}
+
+.heading h2{
+  font-size:44px;
+  font-weight:400;
+  margin-top:13px;
+}
+
+.about{
+  max-width:1150px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.fake-photo{
+  height:520px;
+  display:flex;
+  align-items:end;
+  padding:35px;
+  background:
+    linear-gradient(transparent,rgba(0,0,0,.8)),
+    linear-gradient(135deg,#625b4e,#1d1b18);
+  border:1px solid #3a352d;
+}
+
+.fake-photo span{
+  color:#d8b46a;
+  letter-spacing:3px;
+  font-size:12px;
+}
+
+.about h3{
+  font-size:38px;
+  font-weight:400;
+  margin-bottom:25px;
+}
+
+.about p{
+  color:#aaa;
+  line-height:2;
+  font-size:15px;
+  margin-bottom:18px;
+}
+
+.stats{
+  display:flex;
+  gap:40px;
+  margin-top:35px;
+}
+
+.stat strong{
+  display:block;
+  font-size:28px;
+  color:#d8b46a;
+}
+
+.stat small{
   color:#777;
-  line-height:1.6;
-  font-size:14px;
+  font-size:11px;
+  letter-spacing:1px;
 }
 
-/* GALLERY */
-.gallery{
-  max-width:1100px;
+.cards{
+  max-width:1150px;
   margin:auto;
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  gap:22px;
 }
 
-.gallery-photo{
-  height:280px;
-  background:linear-gradient(135deg,#bdb5a8,#5d574e);
+.card{
+  min-height:360px;
+  padding:30px;
   display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  text-align:center;
+  align-items:end;
+  border:1px solid #38342d;
+  background:linear-gradient(145deg,#39352e,#111);
+  transition:.4s;
 }
 
-/* LOCATION */
-.location{
-  max-width:850px;
-  margin:auto;
-  text-align:center;
+.card:hover{
+  transform:translateY(-8px);
+  border-color:#c9a35c;
 }
 
-.location p{
-  color:#666;
-  line-height:1.8;
+.card h3{
+  font-size:26px;
+  font-weight:400;
+  margin-bottom:10px;
 }
 
-/* FOOTER */
-footer{
-  background:#151515;
-  color:white;
-  text-align:center;
-  padding:55px 20px;
-}
-
-footer h2{
-  letter-spacing:6px;
-}
-
-footer p{
-  color:#888;
-  margin-top:12px;
+.card p{
+  color:#999;
+  line-height:1.7;
   font-size:13px;
 }
 
-/* MOBILE */
-@media(max-width:700px){
-
-  nav{
-    padding:16px;
-  }
-
-  .logo{
-    font-size:17px;
-  }
-
-  nav a{
-    margin-left:8px;
-    font-size:9px;
-  }
-
-  .hero h1{
-    font-size:52px;
-    letter-spacing:6px;
-  }
-
-  .hero p{
-    font-size:14px;
-    padding:0 25px;
-  }
-
-  section{
-    padding:70px 6%;
-  }
-
-  .about{
-    grid-template-columns:1fr;
-  }
-
-  .about h2{
-    font-size:30px;
-  }
-
-  .cards,
-  .gallery{
-    grid-template-columns:1fr;
-  }
-
-  .photo{
-    height:320px;
-  }
+.gallery{
+  max-width:1150px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  grid-template-rows:250px 250px;
+  gap:15px;
 }
-</style>
-</head>
 
-<body>
-
-<nav>
-  <div class="logo">SKY INN</div>
-
-  <div>
-    <a href="#home">HOME</a>
-    <a href="#about">ABOUT</a>
-    <a href="#rooms">ROOMS</a>
-  </div>
-</nav>
-
-
-<section class="
+.gallery div{
+  display
